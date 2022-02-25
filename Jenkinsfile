@@ -6,7 +6,7 @@ node {
     }
 
     stage('Build image') {
-        app = docker.build("st3v0rr/jenkins-docker-in-docker")
+        app = docker.build("st3v0rr/jenkins-docker-in-docker", "--no-cache .")
     }
 
     stage('Push image') {
